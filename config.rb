@@ -54,7 +54,7 @@
 
 helpers do
   def navigation
-    nav_links = {:index => '/',:about => 'about-us.html'}
+    nav_links = {:index => '/',:about => 'pages/about-us'}
   end
 end
 
@@ -67,13 +67,13 @@ end
 # end
 
 # Change the CSS directory
-# set :css_dir, "alternative_css_directory"
+set :css_dir, "stylesheets"
 
 # Change the JS directory
-# set :js_dir, "alternative_js_directory"
+set :js_dir, "javascripts"
 
 # Change the images directory
-# set :images_dir, "alternative_image_directory"
+set :images_dir, "images"
 
 # Build-specific configuration
 configure :build do
@@ -85,7 +85,7 @@ configure :build do
   
   # Enable cache buster
   # activate :cache_buster
-  
+  activate :directory_indexes
   # Use relative URLs
   # activate :relative_assets
   

@@ -1,0 +1,8 @@
+/ helper method for nav in config.rb
+/ returns hash with urls for navigation
+
+%ul
+  - navigation.each do |key,val|
+    %li
+      = link_to "#{key}","#{val}"
+  

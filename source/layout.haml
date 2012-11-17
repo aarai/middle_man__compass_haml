@@ -1,9 +1,10 @@
 !!! 5
-<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if lt IE 7]><html lang="en" class="no-js ie6 oldie"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js ie7 oldie"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js ie8 oldie"><![endif]-->
 <!--[if gt IE 8]><!-->
-%html.no-js{:lang => "en"}
+%html.no-js{ :lang => "en" }
+  <!--<![endif]-->
   %head
     %meta{:charset=>"utf-8"}
     /Always force latest IE rendering engine (even in intranet) & Chrome Frame
@@ -17,6 +18,7 @@
     
   %body{:class=>"#{page_classes}"}
     %div{:id =>"main", :role=>"main"}
+      
       
       /Page Content Goes Here
       = yield

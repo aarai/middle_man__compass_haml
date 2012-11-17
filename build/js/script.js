@@ -1,0 +1,1 @@
+(function(){$(document).ready(function(){return console.log("jquery loaded")})}).call(this);

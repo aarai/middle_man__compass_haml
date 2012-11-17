@@ -67,10 +67,10 @@ end
 # end
 
 # Change the CSS directory
-# set :css_dir, "css"
+ set :css_dir, "css"
 
 # Change the JS directory
-#set :js_dir, "js"
+set :js_dir, "js"
 
 # Change the images directory
 set :images_dir, "img"
@@ -81,7 +81,7 @@ configure :build do
   # activate :minify_css
   
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
   
   # Enable cache buster
   # activate :cache_buster

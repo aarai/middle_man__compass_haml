@@ -67,13 +67,13 @@ end
 # end
 
 # Change the CSS directory
-set :css_dir, "stylesheets"
+# set :css_dir, "css"
 
 # Change the JS directory
-set :js_dir, "javascripts"
+#set :js_dir, "js"
 
 # Change the images directory
-set :images_dir, "images"
+set :images_dir, "img"
 
 # Build-specific configuration
 configure :build do

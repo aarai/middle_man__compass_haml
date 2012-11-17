@@ -1,14 +1,35 @@
-!!!
-%html
+!!! 5
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js{:lang => "en"}
   %head
     %meta{:charset=>"utf-8"}
     /Always force latest IE rendering engine (even in intranet) & Chrome Frame
     %meta{:content=>"IE=edge,chrome=1", 'http-equiv'=>"X-UA-Compatible"}
- 
-    = yield_content :head
-    = partial "partials/head"
+    %meta{:name=>"description", :content=>""}
+    %meta{:name=>"viewport", :content =>"width=device-width"}
+    %link{ :href => "css/site.css", :media => "all", :rel => "stylesheet" }
+    %script{ :src => "js/vendor/modernizr-2.6.2.min.js" }
+
     = partial "partials/navigation"
     
   %body{:class=>"#{page_classes}"}
     %div{:id =>"main", :role=>"main"}
+      
+      /Page Content Goes Here
       = yield
+    / Load JS 
+    %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js" }
+    :javascript
+      window.jQuery || document.write("<script src='js/jquery.min.js'>\x3C/script>")
+    %script{ :src => "js/plugins.js" }
+    %script{ :src => "js/script.js" }
+
+    / Load Google Analytics
+    :javascript
+      var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+      g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+      s.parentNode.insertBefore(g,s)}(document,"script"));

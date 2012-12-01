@@ -10,4 +10,4 @@ Deployment is a breeze with an Rsync, Rake Task
 - Display of how partials and helper methods work within Middleman
 - Examples of how to set dynamic links for resources
 - Example Deployment script, just rename RakeExample to Rakefile and update with your server settings
-- Various other helpul examples of how to create a static site with use of awesome technology
+- Various other helpul examples of how to create a static site with the use of some awesome technologies

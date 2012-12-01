@@ -3,3 +3,4 @@ Because haml, ruby, and sass and compass are so awesome lets not create static s
 Deployment is a breeze with an Rsync, Rake Task
 
 ## Example Rakefile added
+- Rename RakeExample to Rakefile and update with your server settings

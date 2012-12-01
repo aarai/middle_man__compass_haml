@@ -54,7 +54,7 @@
 
 helpers do
   def navigation
-    nav_links = {:index => '/',:about => '/about/'}
+    nav_links = {:index => '/',:about => '/about.html'}
   end
 end
 

@@ -9,6 +9,13 @@ task :build do
   puts status ? "OK" : "FAILED"
 end
 
+desc "Delete the build folder"
+task :remove do
+	puts "## Removing Build Folder"
+	status = system("rm -rf build/")
+	puts status ? "OK" : "FAILED"
+end
+
 desc "Run the preview server at http://localhost:4567"
 task :preview do
   system("bundle exec middleman server")
@@ -21,6 +28,10 @@ task :deploy do
   puts "## Deploying website via rsync to #{SSH_HOST}"
   status = system("rsync -avze 'ssh' --delete build/ #{SSH_USER}@#{SSH_HOST}:#{SSH_DIR}")
   puts status ? "OK" : "FAILED"
+end
+
+desc "Delete and rebuild local site"
+task :rebuild => [:remove, :build] do
 end
 
 desc "Build and deploy website"

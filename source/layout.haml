@@ -23,9 +23,7 @@
       /Page Content Goes Here
       = yield
     / Load JS 
-    %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js" }
-    :javascript
-      window.jQuery || document.write("<script src='js/jquery.min.js'>\x3C/script>")
+    %script{ :src => "js/jquery.min.js"}
     %script{ :src => "js/plugins.js" }
     %script{ :src => "js/script.js" }
 

@@ -54,7 +54,7 @@
 
 helpers do
   def navigation
-    nav_links = {:index => '/',:about => 'pages/about-us'}
+    nav_links = {:index => '/',:about => '/about/'}
   end
 end
 
@@ -85,7 +85,7 @@ configure :build do
   
   # Enable cache buster
   # activate :cache_buster
-  # activate :directory_indexes
+  activate :directory_indexes
   # Use relative URLs
   # activate :relative_assets
   
